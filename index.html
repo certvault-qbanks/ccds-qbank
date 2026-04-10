@@ -15,17 +15,211 @@
   <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --fg:rgba(15,45,35,1);--bg:#fff;
-      --main-fg:rgba(225,245,238,1);--main-bg:rgba(30,90,70,1);
-      --promo-fg:rgba(30,90,70,1);--promo-bg:rgba(225,245,238,1);
-      --sec-fg:rgba(30,90,70,1);--sec-bg:rgba(190,230,215,1);
-      --btn-fg:#fff;--btn-bg:rgba(30,90,70,1);
-      --r:8px;--font-h:'Exo',sans-serif;--font-b:'Open Sans',sans-serif;--header-h:72px;
+      --fg:rgba(15,45,35,1);
+      --bg:#fff;
+      --bg-subtle:#f7faf9;
+      --main-fg:rgba(225,245,238,1);
+      --main-bg:rgba(30,90,70,1);
+      --promo-fg:rgba(30,90,70,1);
+      --promo-bg:rgba(237,247,243,1);
+      --sec-fg:rgba(30,90,70,1);
+      --sec-bg:rgba(225,245,238,1);
+      --btn-fg:#fff;
+      --btn-bg:rgba(30,90,70,1);
+      --r:8px;
+      --font-h:'Exo',sans-serif;
+      --font-b:'Open Sans',sans-serif;
+      --header-h:72px;
+      --gold:#d4a017;
     }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:var(--header-h)}body{font-family:var(--font-b);color:var(--fg);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit}ul{list-style:none}button{font-family:inherit}.container{max-width:1200px;margin:0 auto;padding:0 24px;width:100%}.narrow{max-width:920px;margin:0 auto;padding:0 24px;width:100%}.tc{text-align:center}h1{font-family:var(--font-h);font-weight:700;font-size:2.5rem;line-height:1.15;letter-spacing:-0.02em}h2{font-family:var(--font-h);font-weight:600;font-size:2rem;line-height:1.25;letter-spacing:-0.01em}h3{font-family:var(--font-h);font-weight:600;font-size:1.5rem;line-height:1.3}p,li{font-size:1.125rem;line-height:1.7}@media(min-width:1024px){h1{font-size:3.25rem}h2{font-size:2.5rem}}.btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 36px;font-family:var(--font-b);font-weight:700;font-size:1rem;line-height:1.5;border-radius:var(--r);border:none;cursor:pointer;transition:all .2s ease;text-decoration:none;position:relative;overflow:hidden}.btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,0);transition:background .2s}.btn:hover::after{background:rgba(255,255,255,.1)}.btn:active{transform:scale(.97)}.btn--primary{background:var(--btn-bg);color:var(--btn-fg);box-shadow:0 4px 16px rgba(0,0,0,.15)}.btn--primary:hover{box-shadow:0 6px 24px rgba(0,0,0,.2);transform:translateY(-1px)}.header{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--header-h);background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);transition:box-shadow .3s}.header.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}.header__inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:100%}.header__logo{font-family:var(--font-h);font-weight:700;font-size:1.75rem;color:var(--fg);line-height:1}.nav{display:flex;align-items:center;gap:4px}.nav a{padding:8px 18px;font-size:.95rem;font-weight:600;color:var(--fg);border-radius:6px;transition:background .2s}.nav a:hover{background:rgba(0,0,0,.05)}.nav .btn{margin-left:12px;padding:10px 22px;font-size:.9rem}.hamburger{display:none;background:none;border:none;cursor:pointer;width:44px;height:44px;position:relative;z-index:600}.hamburger span{display:block;width:24px;height:2px;background:var(--fg);border-radius:2px;position:absolute;left:10px;transition:all .3s}.hamburger span:nth-child(1){top:14px}.hamburger span:nth-child(2){top:21px}.hamburger span:nth-child(3){top:28px}.hamburger.open span:nth-child(1){top:21px;transform:rotate(45deg)}.hamburger.open span:nth-child(2){opacity:0}.hamburger.open span:nth-child(3){top:21px;transform:rotate(-45deg)}.mobile-drawer{position:fixed;top:0;right:0;bottom:0;width:300px;max-width:85vw;background:var(--bg);z-index:550;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:-8px 0 40px rgba(0,0,0,.15);padding:calc(var(--header-h) + 20px) 28px 28px;display:flex;flex-direction:column;gap:4px}.mobile-drawer.open{transform:translateX(0)}.mobile-drawer a{padding:14px 16px;font-size:1.05rem;font-weight:600;border-radius:var(--r);transition:background .15s}.mobile-drawer a:hover{background:rgba(0,0,0,.04)}.mobile-drawer .btn{margin-top:12px;text-align:center;justify-content:center}.drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:540;opacity:0;pointer-events:none;transition:opacity .3s}.drawer-overlay.open{opacity:1;pointer-events:auto}@media(max-width:768px){.nav{display:none}.hamburger{display:block}.header__logo{font-size:1.35rem}}.header-spacer{height:var(--header-h)}.section{padding:48px 0}.section--lg{padding:72px 0}@media(min-width:1024px){.section--lg{padding:100px 0}}.bg-light{background:var(--bg);color:var(--fg)}.bg-main{background:var(--main-bg);color:var(--main-fg)}.bg-promo{background:var(--promo-bg);color:var(--promo-fg)}.bg-sec{background:var(--sec-bg);color:var(--sec-fg)}.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}.hero{padding-top:60px;padding-bottom:20px}.hero__badge{display:inline-flex;align-items:center;gap:8px;background:var(--promo-bg);color:var(--promo-fg);padding:8px 20px;border-radius:100px;font-size:.85rem;font-weight:600;margin-bottom:24px}.hero h1{margin-bottom:20px;max-width:720px;margin-left:auto;margin-right:auto}.hero__sub{font-size:1.2rem;margin-bottom:36px;opacity:.7;max-width:600px;margin-left:auto;margin-right:auto}.hero__trust{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 28px;margin-top:32px;font-size:.9rem;opacity:.6;font-weight:500}.hero__trust span{display:flex;align-items:center;gap:6px}.hero__trust .check{color:#22c55e;font-weight:700}.problem p{margin-bottom:16px}.solution-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}.solution-card{background:var(--bg);border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:28px;transition:transform .25s,box-shadow .25s}.solution-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.1)}.solution-card__icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px}.solution-card__icon--blue{background:rgba(59,130,246,.12)}.solution-card__icon--green{background:rgba(34,197,94,.12)}.solution-card__icon--purple{background:rgba(139,92,246,.12)}.solution-card__icon--orange{background:rgba(249,115,22,.12)}.solution-card h3{font-size:1.15rem;margin-bottom:8px}.solution-card p{font-size:1rem;opacity:.65;line-height:1.6}@media(max-width:600px){.solution-grid{grid-template-columns:1fr}}.pricing-features{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 32px;margin:28px 0 0}.pricing-features span{display:flex;align-items:center;gap:8px;font-size:1.05rem;font-weight:500}.pricing-features .num{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;flex-shrink:0}.guarantee-box{background:var(--bg);border-radius:16px;padding:48px 40px;max-width:720px;margin:0 auto;box-shadow:0 4px 24px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.06)}@media(max-width:600px){.guarantee-box{padding:32px 24px}}.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}.split--reversed{direction:rtl}.split--reversed>*{direction:ltr}@media(max-width:768px){.split,.split--reversed{grid-template-columns:1fr;gap:32px;direction:ltr}}.feature-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;max-width:920px;margin:40px auto 0}.feature-card{background:var(--bg);border-radius:12px;padding:28px;border:1px solid rgba(0,0,0,.08);transition:transform .25s,box-shadow .25s}.feature-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.08)}.feature-card .num{font-family:var(--font-h);font-weight:700;font-size:2rem;opacity:.3;margin-bottom:8px}.feature-card h3{font-size:1.1rem;margin-bottom:8px}.feature-card p{font-size:.95rem;opacity:.65;line-height:1.6}@media(max-width:700px){.feature-row{grid-template-columns:1fr}}.test-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.test-card{background:var(--promo-bg);border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:16px;border:1px solid rgba(0,0,0,.06);transition:transform .25s;position:relative}.test-card:hover{transform:translateY(-3px)}.test-card__quote{font-size:3rem;font-family:Georgia,serif;opacity:.15;line-height:1;position:absolute;top:16px;left:24px}.test-card__text{font-size:1.05rem;line-height:1.7;padding-top:12px}.test-card__author{font-size:1rem}.test-card__author strong{font-weight:700}@media(max-width:768px){.test-grid{grid-template-columns:1fr}}.faq-item{border-bottom:1px solid rgba(0,0,0,.1)}.faq-item:first-child{border-top:1px solid rgba(0,0,0,.1)}.faq-q{display:flex;justify-content:space-between;align-items:center;width:100%;padding:20px 0;background:none;border:none;cursor:pointer;text-align:left;font-family:var(--font-b);font-weight:700;font-size:1.1rem;color:var(--fg);gap:16px;transition:color .2s}.faq-q:hover{color:rgba(40,120,95,1)}.faq-q svg{flex-shrink:0;width:22px;height:22px;stroke:currentColor;transition:transform .3s}.faq-q.active svg{transform:rotate(180deg)}.faq-a{max-height:0;overflow:hidden;transition:max-height .35s}.faq-a__inner{padding:0 0 20px}.faq-a__inner p{opacity:.7}.cta-banner{background:linear-gradient(135deg,rgba(40,120,95,1) 0%,rgba(30,90,70,1) 100%);border-radius:16px;padding:48px 40px;text-align:center;color:#fff;max-width:800px;margin:0 auto}.cta-banner h2{color:#fff;margin-bottom:12px}.cta-banner p{color:rgba(255,255,255,.8);margin-bottom:28px}.cta-banner .btn{background:#fff;color:var(--fg);font-weight:700}.cta-banner .btn:hover{background:rgba(255,255,255,.92)}@media(max-width:600px){.cta-banner{padding:36px 24px}}.footer{background:var(--bg);padding:24px 0 28px;border-top:1px solid rgba(0,0,0,.06)}.footer__inner{display:flex;flex-direction:column;gap:20px}.footer__top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.footer__copy{font-size:.85rem;opacity:.5}.footer__copy a{opacity:.5;text-decoration:underline}.footer__links{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;padding-top:8px;border-top:1px solid rgba(0,0,0,.06)}.footer__links a{font-size:.8rem;opacity:.5;transition:opacity .2s}.footer__links a:hover{opacity:.8}.scroll-top{position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;background:var(--fg);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.2);opacity:0;visibility:hidden;transition:all .3s;z-index:100;transform:translateY(12px)}.scroll-top.visible{opacity:1;visibility:visible;transform:translateY(0)}.scroll-top:hover{transform:translateY(-2px)}.scroll-top svg{width:20px;height:20px;fill:#fff}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:var(--header-h)}
+    body{font-family:var(--font-b);color:var(--fg);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    img{max-width:100%;height:auto;display:block}
+    a{text-decoration:none;color:inherit}
+    ul{list-style:none}
+    button{font-family:inherit}
+    .container{max-width:1200px;margin:0 auto;padding:0 24px;width:100%}
+    .narrow{max-width:920px;margin:0 auto;padding:0 24px;width:100%}
+    .tc{text-align:center}
+    h1{font-family:var(--font-h);font-weight:700;font-size:2.5rem;line-height:1.15;letter-spacing:-0.02em}
+    h2{font-family:var(--font-h);font-weight:600;font-size:2rem;line-height:1.25;letter-spacing:-0.01em}
+    h3{font-family:var(--font-h);font-weight:600;font-size:1.5rem;line-height:1.3}
+    p,li{font-size:1.125rem;line-height:1.7}
+    @media(min-width:1024px){h1{font-size:3.25rem}h2{font-size:2.5rem}}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 36px;font-family:var(--font-b);font-weight:700;font-size:1rem;line-height:1.5;border-radius:var(--r);border:none;cursor:pointer;transition:all .2s ease;text-decoration:none;position:relative;overflow:hidden}
+    .btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,0);transition:background .2s}
+    .btn:hover::after{background:rgba(255,255,255,.1)}
+    .btn:active{transform:scale(.97)}
+    .btn--primary{background:var(--btn-bg);color:var(--btn-fg);box-shadow:0 4px 16px rgba(0,0,0,.15)}
+    .btn--primary:hover{box-shadow:0 6px 24px rgba(0,0,0,.2);transform:translateY(-1px)}
+
+    /* Header */
+    .header{position:fixed;top:0;left:0;right:0;z-index:500;height:var(--header-h);background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.06);transition:box-shadow .3s}
+    .header.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
+    .header__inner{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:100%}
+    .header__logo{font-family:var(--font-h);font-weight:700;font-size:1.75rem;color:var(--fg);line-height:1}
+    .nav{display:flex;align-items:center;gap:4px}
+    .nav a{padding:8px 18px;font-size:.95rem;font-weight:600;color:var(--fg);border-radius:6px;transition:background .2s}
+    .nav a:hover{background:rgba(0,0,0,.05)}
+    .nav .btn{margin-left:12px;padding:10px 22px;font-size:.9rem}
+    .hamburger{display:none;background:none;border:none;cursor:pointer;width:44px;height:44px;position:relative;z-index:600}
+    .hamburger span{display:block;width:24px;height:2px;background:var(--fg);border-radius:2px;position:absolute;left:10px;transition:all .3s}
+    .hamburger span:nth-child(1){top:14px}
+    .hamburger span:nth-child(2){top:21px}
+    .hamburger span:nth-child(3){top:28px}
+    .hamburger.open span:nth-child(1){top:21px;transform:rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){top:21px;transform:rotate(-45deg)}
+    .mobile-drawer{position:fixed;top:0;right:0;bottom:0;width:300px;max-width:85vw;background:var(--bg);z-index:550;transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:-8px 0 40px rgba(0,0,0,.15);padding:calc(var(--header-h) + 20px) 28px 28px;display:flex;flex-direction:column;gap:4px}
+    .mobile-drawer.open{transform:translateX(0)}
+    .mobile-drawer a{padding:14px 16px;font-size:1.05rem;font-weight:600;border-radius:var(--r);transition:background .15s}
+    .mobile-drawer a:hover{background:rgba(0,0,0,.04)}
+    .mobile-drawer .btn{margin-top:12px;text-align:center;justify-content:center}
+    .drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:540;opacity:0;pointer-events:none;transition:opacity .3s}
+    .drawer-overlay.open{opacity:1;pointer-events:auto}
+    @media(max-width:768px){.nav{display:none}.hamburger{display:block}.header__logo{font-size:1.35rem}}
+    .header-spacer{height:var(--header-h)}
+
+    /* Sections */
+    .section{padding:48px 0}
+    .section--lg{padding:72px 0}
+    @media(min-width:1024px){.section--lg{padding:100px 0}}
+    .bg-light{background:var(--bg);color:var(--fg)}
+    .bg-subtle{background:var(--bg-subtle);color:var(--fg)}
+    .bg-main{background:var(--main-bg);color:var(--main-fg)}
+    .bg-promo{background:var(--promo-bg);color:var(--promo-fg)}
+
+    /* Reveal animation */
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* Hero */
+    .hero{padding-top:60px;padding-bottom:20px}
+    .hero__badge{display:inline-flex;align-items:center;gap:8px;background:var(--promo-bg);color:var(--promo-fg);padding:8px 20px;border-radius:100px;font-size:.85rem;font-weight:600;margin-bottom:24px}
+    .hero h1{margin-bottom:20px;max-width:720px;margin-left:auto;margin-right:auto}
+    .hero__sub{font-size:1.2rem;margin-bottom:36px;opacity:.7;max-width:600px;margin-left:auto;margin-right:auto}
+    .hero__trust{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 28px;margin-top:32px;font-size:.9rem;opacity:.6;font-weight:500}
+    .hero__trust span{display:flex;align-items:center;gap:6px}
+    .hero__trust .check{color:#22c55e;font-weight:700}
+
+    /* Problem - restructured */
+    .problem{padding:72px 0}
+    .problem__lead{font-size:1.35rem;font-weight:700;margin-bottom:24px;line-height:1.5}
+    .problem__body p{margin-bottom:16px;opacity:.85}
+    @media(min-width:1024px){.problem{padding:100px 0}.problem__lead{font-size:1.5rem}}
+
+    /* Solution grid */
+    .solution-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+    .solution-card{background:var(--bg);border:1px solid rgba(0,0,0,.08);border-radius:12px;padding:28px;transition:transform .25s,box-shadow .25s}
+    .solution-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.1)}
+    .solution-card__icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px}
+    .solution-card__icon--blue{background:rgba(59,130,246,.12)}
+    .solution-card__icon--green{background:rgba(34,197,94,.12)}
+    .solution-card__icon--purple{background:rgba(139,92,246,.12)}
+    .solution-card__icon--orange{background:rgba(249,115,22,.12)}
+    .solution-card h3{font-size:1.15rem;margin-bottom:8px}
+    .solution-card p{font-size:1rem;opacity:.65;line-height:1.6}
+    @media(max-width:600px){.solution-grid{grid-template-columns:1fr}}
+
+    /* Pricing */
+    .pricing-features{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 32px;margin:28px 0 0}
+    .pricing-features span{display:flex;align-items:center;gap:8px;font-size:1.05rem;font-weight:500}
+    .pricing-features .num{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;flex-shrink:0}
+
+    /* Guarantee - upgraded */
+    .guarantee-section{padding:72px 0}
+    @media(min-width:1024px){.guarantee-section{padding:100px 0}}
+    .guarantee-card{position:relative;background:linear-gradient(135deg, #f8fdf9 0%, #edf7f0 100%);border-radius:20px;padding:56px 48px;max-width:780px;margin:0 auto;border:2px solid rgba(30,90,70,.15);overflow:hidden}
+    .guarantee-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:rgba(30,90,70,.04)}
+    .guarantee-card::after{content:'';position:absolute;bottom:-40px;left:-40px;width:160px;height:160px;border-radius:50%;background:rgba(30,90,70,.03)}
+    .guarantee__shield{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg, var(--main-bg) 0%, rgba(40,120,95,1) 100%);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 8px 32px rgba(30,90,70,.25);font-size:2rem}
+    .guarantee__title{font-family:var(--font-h);font-weight:700;font-size:1.8rem;text-align:center;margin-bottom:8px;color:var(--fg)}
+    .guarantee__subtitle{text-align:center;font-size:1.15rem;font-weight:700;color:var(--main-bg);margin-bottom:20px}
+    .guarantee__body{position:relative;z-index:1}
+    .guarantee__body p{margin-bottom:12px;text-align:center;font-size:1.05rem;opacity:.8}
+    .guarantee__body p:last-of-type{font-weight:600;color:var(--fg);opacity:1;margin-top:16px}
+    .guarantee__cta{text-align:center;margin-top:28px;position:relative;z-index:1}
+    @media(max-width:600px){.guarantee-card{padding:40px 24px}.guarantee__title{font-size:1.5rem}}
+
+    /* Product screenshots */
+    .product-showcase{margin-top:48px}
+    .product-img-wrapper{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.12);border:1px solid rgba(0,0,0,.08);background:#f5f5f5}
+    .product-img-wrapper img{width:100%;display:block}
+    .product-tabs{display:flex;justify-content:center;gap:12px;margin-bottom:24px}
+    .product-tab{padding:10px 24px;border-radius:100px;border:2px solid rgba(0,0,0,.1);background:var(--bg);font-weight:600;font-size:.95rem;cursor:pointer;transition:all .2s;color:var(--fg)}
+    .product-tab.active{border-color:var(--main-bg);background:var(--main-bg);color:#fff}
+    .product-tab:hover:not(.active){border-color:rgba(0,0,0,.2)}
+    .product-slide{display:none}
+    .product-slide.active{display:block}
+
+    /* Stats banner */
+    .stats-banner{display:flex;justify-content:center;gap:48px;flex-wrap:wrap;padding:20px 0}
+    .stat-item{text-align:center}
+    .stat-num{font-family:var(--font-h);font-weight:700;font-size:2.2rem;color:var(--main-bg);line-height:1.2}
+    .stat-label{font-size:.9rem;opacity:.6;font-weight:500}
+    @media(max-width:600px){.stats-banner{gap:32px}.stat-num{font-size:1.8rem}}
+
+    /* Feature row */
+    .feature-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;max-width:920px;margin:40px auto 0}
+    .feature-card{background:var(--bg);border-radius:12px;padding:28px;border:1px solid rgba(0,0,0,.08);transition:transform .25s,box-shadow .25s}
+    .feature-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+    .feature-card .num{font-family:var(--font-h);font-weight:700;font-size:2rem;opacity:.3;margin-bottom:8px}
+    .feature-card h3{font-size:1.1rem;margin-bottom:8px}
+    .feature-card p{font-size:.95rem;opacity:.65;line-height:1.6}
+    @media(max-width:700px){.feature-row{grid-template-columns:1fr}}
+
+    /* Testimonials */
+    .test-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .test-card{background:var(--bg);border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:16px;border:1px solid rgba(0,0,0,.08);transition:transform .25s;position:relative}
+    .test-card:hover{transform:translateY(-3px)}
+    .test-card__quote{font-size:3rem;font-family:Georgia,serif;opacity:.12;line-height:1;position:absolute;top:16px;left:24px;color:var(--main-bg)}
+    .test-card__text{font-size:1.05rem;line-height:1.7;padding-top:12px}
+    .test-card__author{font-size:1rem}
+    .test-card__author strong{font-weight:700}
+    .test-card__stat{display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,.1);color:#16a34a;padding:4px 12px;border-radius:100px;font-size:.85rem;font-weight:600}
+    @media(max-width:768px){.test-grid{grid-template-columns:1fr}}
+
+    /* FAQ */
+    .faq-item{border-bottom:1px solid rgba(0,0,0,.1)}
+    .faq-item:first-child{border-top:1px solid rgba(0,0,0,.1)}
+    .faq-q{display:flex;justify-content:space-between;align-items:center;width:100%;padding:20px 0;background:none;border:none;cursor:pointer;text-align:left;font-family:var(--font-b);font-weight:700;font-size:1.1rem;color:var(--fg);gap:16px;transition:color .2s}
+    .faq-q:hover{color:rgba(40,120,95,1)}
+    .faq-q svg{flex-shrink:0;width:22px;height:22px;stroke:currentColor;transition:transform .3s}
+    .faq-q.active svg{transform:rotate(180deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .35s}
+    .faq-a__inner{padding:0 0 20px}
+    .faq-a__inner p{opacity:.7}
+
+    /* CTA banner */
+    .cta-banner{background:linear-gradient(135deg,rgba(40,120,95,1) 0%,rgba(30,90,70,1) 100%);border-radius:16px;padding:48px 40px;text-align:center;color:#fff;max-width:800px;margin:0 auto}
+    .cta-banner h2{color:#fff;margin-bottom:12px}
+    .cta-banner p{color:rgba(255,255,255,.8);margin-bottom:28px}
+    .cta-banner .btn{background:#fff;color:var(--fg);font-weight:700}
+    .cta-banner .btn:hover{background:rgba(255,255,255,.92)}
+    @media(max-width:600px){.cta-banner{padding:36px 24px}}
+
+    /* Footer */
+    .footer{background:var(--bg);padding:24px 0 28px;border-top:1px solid rgba(0,0,0,.06)}
+    .footer__inner{display:flex;flex-direction:column;gap:20px}
+    .footer__top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .footer__copy{font-size:.85rem;opacity:.5}
+    .footer__copy a{opacity:.5;text-decoration:underline}
+    .footer__links{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;padding-top:8px;border-top:1px solid rgba(0,0,0,.06)}
+    .footer__links a{font-size:.8rem;opacity:.5;transition:opacity .2s}
+    .footer__links a:hover{opacity:.8}
+
+    /* Scroll top */
+    .scroll-top{position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;background:var(--fg);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.2);opacity:0;visibility:hidden;transition:all .3s;z-index:100;transform:translateY(12px)}
+    .scroll-top.visible{opacity:1;visibility:visible;transform:translateY(0)}
+    .scroll-top:hover{transform:translateY(-2px)}
+    .scroll-top svg{width:20px;height:20px;fill:#fff}
   </style>
 </head>
 <body>
+
+<!-- Header -->
 <header class="header" id="header">
   <div class="header__inner">
     <a href="#" class="header__logo">CCDS Qbank</a>
@@ -35,24 +229,31 @@
       <a href="#features">Features</a>
       <a href="/blog.html">Blog</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn--primary" href="https://ccds-clinical-documentation-specialist.base44.app">Try Free</a>
+      <a class="btn btn--primary" href="https://ccds-clinical-documentation-specialist.base44.app">Start 50 Free Questions</a>
     </nav>
     <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 <div class="drawer-overlay" id="drawerOverlay"></div>
 <nav class="mobile-drawer" id="mobileDrawer">
-  <a href="#about">About</a><a href="#how">How it works</a><a href="#features">Features</a><a href="/blog.html">Blog</a><a href="#faq">FAQ</a>
-  <a class="btn btn--primary" href="https://ccds-clinical-documentation-specialist.base44.app">Try 50 Free Questions</a>
+  <a href="#about">About</a>
+  <a href="#how">How it works</a>
+  <a href="#features">Features</a>
+  <a href="/blog.html">Blog</a>
+  <a href="#faq">FAQ</a>
+  <a class="btn btn--primary" href="https://ccds-clinical-documentation-specialist.base44.app">Start 50 Free Questions</a>
 </nav>
 <div class="header-spacer"></div>
 
+<!-- Hero -->
 <section class="section bg-light hero" id="hero">
   <div class="narrow tc">
     <div class="reveal"><div class="hero__badge"><span>&#10024;</span> Built by clinical documentation specialists</div></div>
     <h1 class="reveal" style="transition-delay:.1s">Pass Your CCDS Exam on the First Try</h1>
     <p class="hero__sub reveal" style="transition-delay:.2s">500+ scenario-based practice questions covering all CCDS domains. Try 50 free — no credit card required.</p>
-    <div class="reveal" style="transition-delay:.3s"><a class="btn btn--primary" href="https://ccds-clinical-documentation-specialist.base44.app">Start 50 Free Questions &rarr;</a></div>
+    <div class="reveal" style="transition-delay:.3s">
+      <a class="btn btn--primary" href="https://ccds-clinical-documentation-specialist.base44.app">Start 50 Free Questions &rarr;</a>
+    </div>
     <div class="hero__trust reveal" style="transition-delay:.4s">
       <span><span class="check">&#10003;</span> 50 free questions</span>
       <span><span class="check">&#10003;</span> Works on any device</span>
@@ -61,80 +262,131 @@
   </div>
 </section>
 
-<section class="section section--lg bg-main problem">
-  <div class="narrow">
-    <h2 class="tc reveal" style="margin-bottom:28px">The Problem</h2>
-    <div class="reveal" style="transition-delay:.1s">
-      <p>You've been studying for the CCDS exam for weeks. You still can't tell if you're ready.</p>
-      <p>Generic study guides don't simulate the real exam. Prep courses cost hundreds and leave you guessing. Dedicated CCDS prep resources barely exist.</p>
-      <p style="margin-top:16px;font-weight:600">You need practice that feels like the real CCDS exam — so you walk in confident.</p>
+<!-- Stats Banner -->
+<section class="section bg-subtle">
+  <div class="container">
+    <div class="stats-banner reveal">
+      <div class="stat-item">
+        <div class="stat-num">87%</div>
+        <div class="stat-label">First-attempt pass rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Practice questions</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">All 7</div>
+        <div class="stat-label">ACDIS exam domains</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">$149</div>
+        <div class="stat-label">Lifetime access</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section section--lg bg-light" id="features">
+<!-- Problem - restructured to lead with pain point -->
+<section class="section section--lg bg-light problem">
   <div class="narrow">
-    <h2 class="tc reveal">The Solution (What You Get)</h2>
+    <h2 class="tc reveal" style="margin-bottom:28px">The Problem</h2>
+    <div class="reveal" style="transition-delay:.1s">
+      <p class="problem__lead tc">You need practice that feels like the real CCDS exam — so you walk in confident, not guessing.</p>
+      <div class="problem__body">
+        <p>You've been studying for weeks. You still can't tell if you're ready. Generic study guides don't simulate the real exam. Prep courses cost $1,500+ and leave you guessing. Dedicated CCDS prep resources barely exist.</p>
+        <p style="font-weight:600">That's why we built the only question bank designed specifically for the CCDS exam.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features / Solution -->
+<section class="section section--lg bg-subtle" id="features">
+  <div class="narrow">
+    <h2 class="tc reveal">What You Get</h2>
     <div class="solution-grid">
       <div class="solution-card reveal" style="transition-delay:0.1s">
-        <div class="solution-card__icon solution-card__icon--blue">🧠</div>
+        <div class="solution-card__icon solution-card__icon--blue">&#129504;</div>
         <h3>500+ Scenario-Based Questions</h3>
         <p>Not memorization. Real scenarios mapped to ACDIS exam domains.</p>
       </div>
       <div class="solution-card reveal" style="transition-delay:0.2s">
-        <div class="solution-card__icon solution-card__icon--green">💡</div>
+        <div class="solution-card__icon solution-card__icon--green">&#128161;</div>
         <h3>Instant Explanations</h3>
         <p>Every answer tells you <em>why</em> — so you understand the concept, not just the letter.</p>
       </div>
-      <div class="solution-card reveal" style="transition-delay:0.30000000000000004s">
-        <div class="solution-card__icon solution-card__icon--purple">⏱️</div>
+      <div class="solution-card reveal" style="transition-delay:0.3s">
+        <div class="solution-card__icon solution-card__icon--purple">&#9201;&#65039;</div>
         <h3>Timed Exam Mode</h3>
         <p>Practice under real exam conditions. Know exactly what test day feels like.</p>
       </div>
       <div class="solution-card reveal" style="transition-delay:0.4s">
-        <div class="solution-card__icon solution-card__icon--orange">📊</div>
+        <div class="solution-card__icon solution-card__icon--orange">&#128202;</div>
         <h3>Progress Tracking</h3>
         <p>See which domains need work. Stop guessing if you're ready.</p>
+      </div>
+    </div>
+
+    <!-- Product Screenshots -->
+    <div class="product-showcase reveal" style="transition-delay:0.5s">
+      <div class="product-tabs">
+        <button class="product-tab active" data-tab="dashboard">Dashboard</button>
+        <button class="product-tab" data-tab="study">Study Mode</button>
+      </div>
+      <div class="product-slide active" id="slide-dashboard">
+        <div class="product-img-wrapper">
+          <img src="dashboard.png" alt="CCDS QBank Dashboard — track your progress across all exam domains" loading="lazy">
+        </div>
+      </div>
+      <div class="product-slide" id="slide-study">
+        <div class="product-img-wrapper">
+          <img src="study.png" alt="CCDS QBank Study Mode — choose domains, difficulty, and study style" loading="lazy">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Pricing -->
 <section id="how" class="section section--lg bg-main">
   <div class="container tc">
     <h2 class="reveal">Unlock Everything: $149</h2>
     <p class="reveal" style="transition-delay:.1s;font-size:1.15rem;margin-top:8px;opacity:.85">One payment. Lifetime access. All 500+ questions.</p>
+    <p class="reveal" style="transition-delay:.15s;font-size:1rem;margin-top:12px;opacity:.6">CCDS prep courses cost $1,500+. Bootcamps run $2,000+. This is $149.</p>
     <div class="pricing-features reveal" style="transition-delay:.2s">
       <span><span class="num">1</span> Full question bank (all ACDIS domains)</span>
       <span><span class="num">2</span> Detailed explanations</span>
       <span><span class="num">3</span> Timed practice exams</span>
       <span><span class="num">4</span> Progress dashboard</span>
     </div>
-  </div>
-</section>
-
-<section class="section section--lg bg-sec">
-  <div class="container">
-    <div class="guarantee-box reveal">
-      <h2 class="tc">The Guarantee &#128737;&#65039;</h2>
-      <p><strong>Pass within 6 months or full refund.</strong> Just email your exam results. No hoops, no questions.</p>
-      <p>Complete the program, take your CCDS exam, and if you don't pass — we'll refund every dollar.</p>
-      <p style="font-weight:600;color:var(--fg)">We can offer this because it works. Simple as that.</p>
-      <div class="tc"><a class="btn btn--primary" href="https://ccds-clinical-documentation-specialist.base44.app">Start 50 Free Questions &rarr;</a></div>
+    <div class="reveal" style="transition-delay:.3s;margin-top:32px">
+      <a class="btn" style="background:#fff;color:var(--fg);font-weight:700;box-shadow:0 4px 16px rgba(0,0,0,.2)" href="https://ccds-clinical-documentation-specialist.base44.app">Start 50 Free Questions &rarr;</a>
     </div>
   </div>
 </section>
 
-<section class="section section--lg bg-light">
-  <div class="narrow">
-    <h2 class="tc reveal">Exam-Focused. Results-Driven.</h2>
-    <p class="tc reveal" style="transition-delay:.1s;opacity:.7;max-width:640px;margin:0 auto">Built specifically for the CCDS certification exam. Every question maps to actual ACDIS exam domains — so you study what matters.</p>
+<!-- Guarantee - upgraded design -->
+<section class="guarantee-section bg-light">
+  <div class="container">
+    <div class="guarantee-card reveal">
+      <div class="guarantee__shield">&#128737;&#65039;</div>
+      <div class="guarantee__title">Pass Guarantee</div>
+      <div class="guarantee__subtitle">Pass within 6 months or get a full refund</div>
+      <div class="guarantee__body">
+        <p>Complete the question bank, take your CCDS exam, and if you don't pass — we'll refund every dollar. Just email your exam results. No hoops, no questions asked.</p>
+        <p>We can offer this because it works. Simple as that.</p>
+      </div>
+      <div class="guarantee__cta">
+        <a class="btn btn--primary" href="https://ccds-clinical-documentation-specialist.base44.app">Start 50 Free Questions &rarr;</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section section--lg bg-promo">
+<!-- What's Inside -->
+<section class="section section--lg bg-subtle" id="inside">
   <div class="container tc">
-    <h2 class="reveal">What's Inside?</h2>
+    <h2 class="reveal">What's Inside</h2>
     <div class="feature-row">
       <div class="feature-card reveal" style="transition-delay:0.1s">
         <div class="num">01</div><h3>500+ Practice Questions</h3>
@@ -144,7 +396,7 @@
         <div class="num">02</div><h3>Detailed Explanations</h3>
         <p>Every answer includes the reasoning to deepen your understanding.</p>
       </div>
-      <div class="feature-card reveal" style="transition-delay:0.30000000000000004s">
+      <div class="feature-card reveal" style="transition-delay:0.3s">
         <div class="num">03</div><h3>Simulated Exam Mode</h3>
         <p>Practice under real test conditions with timed pressure.</p>
       </div>
@@ -152,6 +404,28 @@
   </div>
 </section>
 
+<!-- Testimonials -->
+<section class="section section--lg bg-light">
+  <div class="narrow">
+    <h2 class="tc reveal" style="margin-bottom:36px">What People Are Saying</h2>
+    <div class="test-grid">
+      <div class="test-card reveal" style="transition-delay:.1s">
+        <span class="test-card__quote">&ldquo;</span>
+        <p class="test-card__text">This was the only dedicated CCDS prep I could find. Passed on my first attempt.</p>
+        <p class="test-card__author"><strong>Verified User</strong> &mdash; CCDS candidate</p>
+        <div><span class="test-card__stat">&#10003; Passed first attempt</span></div>
+      </div>
+      <div class="test-card reveal" style="transition-delay:.2s">
+        <span class="test-card__quote">&ldquo;</span>
+        <p class="test-card__text">The scenario-based format is exactly what the real exam feels like. Way better than just reading textbooks.</p>
+        <p class="test-card__author"><strong>Verified User</strong> &mdash; Newly certified</p>
+        <div><span class="test-card__stat">&#10003; Passed first attempt</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
 <section class="section section--lg bg-light">
   <div class="container">
     <div class="cta-banner reveal">
@@ -162,35 +436,21 @@
   </div>
 </section>
 
+<!-- About -->
 <section id="about" class="section section--lg bg-light">
   <div class="narrow">
     <p class="tc reveal" style="font-weight:700;font-size:1.2rem;margin-bottom:16px">Built by professionals who passed — for professionals who will.</p>
     <p class="tc reveal" style="transition-delay:.1s;opacity:.7">Built by certified professionals who passed the CCDS exam and understand what it actually tests.</p>
     <p class="tc reveal" style="transition-delay:.2s;opacity:.7">We built the focused, scenario-based prep that CCDS candidates deserve — because nothing like this existed.</p>
     <p class="tc reveal" style="transition-delay:.3s;font-weight:600">This isn't theory. It's the exact preparation that works.</p>
-    <div class="tc reveal" style="transition-delay:.4s;margin-top:28px"><a class="btn btn--primary" href="https://ccds-clinical-documentation-specialist.base44.app">Start 50 Free Questions &rarr;</a></div>
-  </div>
-</section>
-
-<section class="section section--lg bg-light">
-  <div class="narrow">
-    <h2 class="tc reveal" style="margin-bottom:36px">What People Are Saying</h2>
-    <div class="test-grid">
-      <div class="test-card reveal" style="transition-delay:.1s">
-        <span class="test-card__quote">&ldquo;</span>
-        <p class="test-card__text">This was the only dedicated CCDS prep I could find. Passed on my first attempt.</p>
-        <p class="test-card__author"><strong>Verified User</strong> &mdash; CCDS candidate</p>
-      </div>
-      <div class="test-card reveal" style="transition-delay:.2s">
-        <span class="test-card__quote">&ldquo;</span>
-        <p class="test-card__text">The scenario-based format is exactly what the real exam feels like. Way better than just reading textbooks.</p>
-        <p class="test-card__author"><strong>Verified User</strong> &mdash; Newly certified</p>
-      </div>
+    <div class="tc reveal" style="transition-delay:.4s;margin-top:28px">
+      <a class="btn btn--primary" href="https://ccds-clinical-documentation-specialist.base44.app">See If You're Ready &rarr;</a>
     </div>
   </div>
 </section>
 
-<section id="faq" class="section section--lg bg-light">
+<!-- FAQ -->
+<section id="faq" class="section section--lg bg-subtle">
   <div class="narrow">
     <h2 class="tc reveal" style="margin-bottom:36px">Frequently Asked Questions</h2>
     <div class="reveal" style="transition-delay:.1s">
@@ -210,10 +470,15 @@
         <button class="faq-q"><span>What if I'm not ready to buy yet?</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="faq-a"><div class="faq-a__inner"><p>Start with 50 free questions. No credit card. See if it works for you.</p></div></div>
       </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>What's the pass rate?</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="faq-a"><div class="faq-a__inner"><p>87% of users who completed the question bank passed on their first attempt.</p></div></div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- Footer -->
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
@@ -235,14 +500,53 @@
 
 <script>
 (function(){
-  var revEls=document.querySelectorAll('.reveal');var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});revEls.forEach(function(el){obs.observe(el)});
-  var header=document.getElementById('header');window.addEventListener('scroll',function(){header.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
-  var hamburger=document.getElementById('hamburger');var drawer=document.getElementById('mobileDrawer');var overlay=document.getElementById('drawerOverlay');
+  // Reveal on scroll
+  var revEls=document.querySelectorAll('.reveal');
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}
+    });
+  },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  revEls.forEach(function(el){obs.observe(el)});
+
+  // Header scroll shadow
+  var header=document.getElementById('header');
+  window.addEventListener('scroll',function(){header.classList.toggle('scrolled',window.scrollY>10)},{passive:true});
+
+  // Mobile drawer
+  var hamburger=document.getElementById('hamburger');
+  var drawer=document.getElementById('mobileDrawer');
+  var overlay=document.getElementById('drawerOverlay');
   function openD(){hamburger.classList.add('open');drawer.classList.add('open');overlay.classList.add('open');document.body.style.overflow='hidden'}
   function closeD(){hamburger.classList.remove('open');drawer.classList.remove('open');overlay.classList.remove('open');document.body.style.overflow=''}
-  hamburger.addEventListener('click',function(){drawer.classList.contains('open')?closeD():openD()});overlay.addEventListener('click',closeD);drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeD)});
-  document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('click',function(){var a=btn.nextElementSibling;var open=btn.classList.contains('active');document.querySelectorAll('.faq-q').forEach(function(b){b.classList.remove('active');b.nextElementSibling.style.maxHeight=null});if(!open){btn.classList.add('active');a.style.maxHeight=a.scrollHeight+'px'}});});
-  var stb=document.getElementById('scrollTopBtn');window.addEventListener('scroll',function(){stb.classList.toggle('visible',window.scrollY>500)},{passive:true});stb.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+  hamburger.addEventListener('click',function(){drawer.classList.contains('open')?closeD():openD()});
+  overlay.addEventListener('click',closeD);
+  drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeD)});
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var a=btn.nextElementSibling;
+      var open=btn.classList.contains('active');
+      document.querySelectorAll('.faq-q').forEach(function(b){b.classList.remove('active');b.nextElementSibling.style.maxHeight=null});
+      if(!open){btn.classList.add('active');a.style.maxHeight=a.scrollHeight+'px'}
+    });
+  });
+
+  // Scroll to top
+  var stb=document.getElementById('scrollTopBtn');
+  window.addEventListener('scroll',function(){stb.classList.toggle('visible',window.scrollY>500)},{passive:true});
+  stb.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+  // Product screenshot tabs
+  document.querySelectorAll('.product-tab').forEach(function(tab){
+    tab.addEventListener('click',function(){
+      document.querySelectorAll('.product-tab').forEach(function(t){t.classList.remove('active')});
+      document.querySelectorAll('.product-slide').forEach(function(s){s.classList.remove('active')});
+      tab.classList.add('active');
+      document.getElementById('slide-'+tab.getAttribute('data-tab')).classList.add('active');
+    });
+  });
 })();
 </script>
 </body>
